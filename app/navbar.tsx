@@ -3,7 +3,7 @@
 import Image from "next/image";
 import logo from "./image/Dolphin.png";
 import Link from "next/link";
-import { AlertDialog, AlertDialogContent, AlertDialogTrigger } from "@/components/ui/alert-dialog";
+import { AlertDialog, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
@@ -33,8 +33,16 @@ export default function Navbar() {
               <AlertDialogTrigger asChild>
                 <Search></Search>
               </AlertDialogTrigger>
-              <AlertDialogContent>
-                <Input></Input>
+              <AlertDialogContent className="bg-slate">
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Search</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    <Input></Input>
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
           </div>
